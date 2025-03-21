@@ -1,0 +1,1 @@
+Place the shadowremoval.pkl & refinement.pkl files inplace of the given .txt file.
