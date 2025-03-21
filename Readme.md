@@ -2,6 +2,17 @@
 
 This repository contains the code and resources for the model used in the competition. To ensure the model runs properly, you need to download and extract the model weights.
 
+## Cloning the Repository
+
+Before getting started, you'll need to clone this repository to your local machine:
+
+```bash
+git clone https://github.com/quantmask/CV_SVNIT.git
+cd CV_SVNIT
+```
+
+This will create a local copy of the repository and navigate to the project directory.
+
 ## Downloading and Extracting Model Weights
 
 The model weights are provided as a zip file hosted on Google Drive. Follow the steps below to download and extract them into the `weights` directory.
