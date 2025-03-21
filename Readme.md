@@ -10,41 +10,44 @@ The model weights are provided as a zip file hosted on Google Drive. Follow the 
 
 First, create a directory named `weights` if it doesn't already exist:
 
+```bash
 mkdir -p weights
+```
 
 ### Step 2: Download the Weights Zip File
 
 Use the following code block to download the zip file containing the model weights. **Remember to replace the placeholder `FILE_ID` with your actual Google Drive file ID.**
 
+```bash
 FILE_ID="1FbwQvZH3afAqRArHlQP72pP9Cf7HGNfK"
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?id=$FILE_ID&export=download' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=$FILE_ID" -O weights.zip && rm -rf /tmp/cookies.txt
-
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?id=$FILE_ID&export=download' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=$FILE_ID" -O weights.zip && rm -rf /tmp/cookies.txt
+```
 
 ### Step 3: Extract the Weights
-After downloading, extract the contents of the zip file into the `weights` directory
 
+After downloading, extract the contents of the zip file into the `weights` directory:
+
+```bash
 unzip weights.zip -d weights
-
+```
 
 ### Step 4: Clean Up
 
 Optionally, you can remove the zip file after extraction to save space:
 
+```bash
 rm weights.zip
-
-
-
-
+```
 
 ## Important Notes
 
 - **Dependencies**: Ensure you have `wget` and `unzip` installed on your system. You can install them using:
   - For Debian/Ubuntu:
-    ```
+    ```bash
     sudo apt-get install wget unzip
     ```
   - For macOS (using Homebrew):
-    ```
+    ```bash
     brew install wget unzip
     ```
   
@@ -55,4 +58,3 @@ rm weights.zip
 ## Conclusion
 
 Following these steps will ensure that you have all necessary files downloaded and extracted correctly. If you have any questions or need further assistance, feel free to reach out!
-
