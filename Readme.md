@@ -62,9 +62,7 @@ The test script will use the model weights from the `weights` directory to proce
   - gdown: Install with `pip install gdown`
   - For Linux/Mac: Ensure you have `unzip` installed
   - For Windows: Use built-in extraction tools or install 7-Zip
-  
-- **Google Drive Permissions**: Make sure that the Google Drive file is accessible. The link should be set to "Anyone with the link can view."
-  
+ 
 - **Alternative Download Method**: If you encounter issues with gdown, you can manually download the file from the Google Drive link and move it to the weights directory.
 
 ## Conclusion
