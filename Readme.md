@@ -58,7 +58,7 @@ The test script will use the model weights from the `weights` directory to proce
 ## Important Notes
 
 - **Dependencies**: 
-  - Python 3.7 or higher
+  - Python 3.8
   - gdown: Install with `pip install gdown`
   - For Linux/Mac: Ensure you have `unzip` installed
   - For Windows: Use built-in extraction tools or install 7-Zip
