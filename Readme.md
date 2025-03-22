@@ -16,44 +16,20 @@ This will create a local copy of the repository and navigate to the project dire
 ## Downloading and Extracting Model Weights
 
 The model weights are provided as a zip file hosted on Google Drive. Follow the steps below to download and extract them into the `weights` directory.
+## Downloading and Extracting Model Weights
 
-### Step 1: Create Weights Directory
-
-First, create a directory named `weights` if it doesn't already exist:
-
-```bash
-mkdir -p weights
-```
-
-### Step 2: Download the Weights Zip File
-
+### Step 1: Download the Weights Zip File
 Use the following code block to download the zip file containing the model weights from the provided Google Drive link:
 
 ```bash
-# Extract the file ID from the Google Drive link
-FILE_ID="1FbwQvZH3afAqRArHlQP72pP9Cf7HGNfK"
-
-# For files larger than 100MB (handles Google Drive download confirmation)
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?id=${FILE_ID}&export=download' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=${FILE_ID}" -O weights.zip && rm -rf /tmp/cookies.txt
-
-# Alternative method for smaller files (if the above doesn't work)
-# wget --no-check-certificate "https://docs.google.com/uc?export=download&id=${FILE_ID}" -O weights.zip
+gdown --id 1IrFc3PhIKDx2hJPATrALEUbeZeeWDcuR -O weights.zip
 ```
 
-### Step 3: Extract the Weights
-
-After downloading, extract the contents of the zip file into the `weights` directory:
+### Step 2: Extract the Weights
+After downloading, extract the contents of the zip file into the weights directory:
 
 ```bash
 unzip weights.zip -d weights
-```
-
-### Step 4: Clean Up
-
-Optionally, you can remove the zip file after extraction to save space:
-
-```bash
-rm weights.zip
 ```
 
 ## Running the Model
