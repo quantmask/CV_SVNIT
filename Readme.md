@@ -15,10 +15,10 @@ This will create a local copy of the repository and navigate to the project dire
 
 ## Downloading and Extracting Model Weights
 
-The model weights are provided as a zip file hosted on Google Drive. Follow the steps below to download and extract them into the `weights` directory.
-## Downloading and Extracting Model Weights
+The model weights are provided as a zip file hosted on Google Drive. Follow the steps below to download and extract them.
 
 ### Step 1: Download the Weights Zip File
+
 Use the following code block to download the zip file containing the model weights from the provided Google Drive link:
 
 ```bash
@@ -26,10 +26,16 @@ gdown --id 1IrFc3PhIKDx2hJPATrALEUbeZeeWDcuR -O weights.zip
 ```
 
 ### Step 2: Extract the Weights
-After downloading, extract the contents of the zip file into the weights directory:
+
+After downloading, extract the contents of the zip file:
 
 ```bash
+# For Linux/Mac
 unzip weights.zip -d weights
+
+# For Windows
+# Use File Explorer to extract the zip file into the weights folder
+# Or use a tool like 7-Zip or WinRAR
 ```
 
 ## Running the Model
@@ -51,19 +57,15 @@ The test script will use the model weights from the `weights` directory to proce
 
 ## Important Notes
 
-- **Dependencies**: Ensure you have `wget` and `unzip` installed on your system. You can install them using:
-  - For Debian/Ubuntu:
-    ```bash
-    sudo apt-get install wget unzip
-    ```
-  - For macOS (using Homebrew):
-    ```bash
-    brew install wget unzip
-    ```
+- **Dependencies**: 
+  - Python 3.7 or higher
+  - gdown: Install with `pip install gdown`
+  - For Linux/Mac: Ensure you have `unzip` installed
+  - For Windows: Use built-in extraction tools or install 7-Zip
   
 - **Google Drive Permissions**: Make sure that the Google Drive file is accessible. The link should be set to "Anyone with the link can view."
   
-- **Alternative Download Methods**: If you encounter issues with the wget command, you can also manually download the file from the link [https://drive.google.com/file/d/1FbwQvZH3afAqRArHlQP72pP9Cf7HGNfK/view?usp=sharing](https://drive.google.com/file/d/1FbwQvZH3afAqRArHlQP72pP9Cf7HGNfK/view?usp=sharing) and move it to the weights directory.
+- **Alternative Download Method**: If you encounter issues with gdown, you can manually download the file from the Google Drive link and move it to the weights directory.
 
 ## Conclusion
 
